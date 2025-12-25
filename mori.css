@@ -1,140 +1,22 @@
-:root
-{
-	--dot-0: #e2dfb1;
-	--dot-1: #b0b87f;
-	--dot-2: #73825c;
-	--dot-3: #444429;
-
+:root {
     --latten: #282202;
     --loden: #E3CD76;
-	
-	--wool: #fffbf3;
-	--cream: #fff0cc;
-	--putty: #d1c3b5;
-	--earth: #907467;
-	--tweed: #5d4949;
-	--peach: #ffd4aa;
-	--tenne: #f19a75;
-	--aubergine: #573c57;
-	--dusty-pink: #f8bcc3;
-	--tyrian: #8b3052;
-	--midnight: #31313f;
-	--patina: #3c7785;
-	--ice: #a8b9c6;
-	--heather: #a8b9c6;
-	--mori: #0e5942;
-	--moss: #5e9163;
-	--leaf: #dae07e;
-}
 
-@font-face {
-    font-family: "Epicene Text";
-    src: url("webfonts/epicene-text-regular.woff2") format('woff2');
-}
-
-@font-face {
-    font-family: "Epicene Text";
-    src: url("webfonts/epicene-text-light.woff2") format('woff2');
-	font-weight: 300;
-}
-
-@font-face {
-    font-family: "Epicene Text";
-    src: url("webfonts/epicene-text-regular-italic.woff2") format('woff2');
-	font-style: italic;
-}
-
-@font-face {
-    font-family: "Epicene Text";
-    src: url("webfonts/epicene-text-bold.woff2") format('woff2');
-	font-weight: bold;
-}
-
-@font-face {
-    font-family: "Epicene Text";
-    src: url("webfonts/epicene-text-bold-italic.woff2") format('woff2');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-    font-family: "Epicene Text";
-    src: url("webfonts/epicene-text-bold.woff2") format('woff2');
-	font-weight: bold;
-}
-
-@font-face {
-    font-family: "Epicene Text";
-    src: url("webfonts/epicene-text-black.woff2") format('woff2');
-	font-weight: 900;
-}
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-body {
-	margin: 0;
-	font-family: "Epicene Text", "Garamond", "Times New Roman", serif;
-}
-
-.hex-grid {
-	--size: 120px;
-	--gap: 16px;
-	--row-gap: 20px;
-	width: min(1100px, 100%);
-	margin: 32px auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: var(--row-gap);
-}
-
-.hex-row {
-	position: relative;
-	height: var(--size);
-	width: min(1100px, 100%);
-}
-
-.hex-row .swatch {
-	position: absolute;
-	left: calc((var(--slot) + var(--offset, 0)) * (var(--size) + var(--gap)));
-}
-
-.swatch {
-	width: var(--size);
-	height: var(--size);
-	border-radius: 50%;
-	background: var(--fill);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-
-.swatch .name {
-	font-size: 16px;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	font-weight: 500;
-	line-height: 1.1;
-}
-
-.swatch .hex {
-	font-size: 13px;
-	letter-spacing: 0.06em;
-	font-weight: 600;
-	margin-top: 2px;
-	line-height: 1.1;
-}
-
-.swatch.light {
-	color: #3a3434;
-}
-
-.swatch.dark {
-	color: #f5efe9;
+    --wool: #fffbf3;
+    --cream: #fff0cc;
+    --putty: #d1c3b5;
+    --earth: #907467;
+    --tweed: #5d4949;
+    --peach: #ffd4aa;
+    --tenne: #f19a75;
+    --aubergine: #573c57;
+    --dusty-pink: #f8bcc3;
+    --tyrian: #8b3052;
+    --midnight: #31313f;
+    --patina: #3c7785;
+    --ice: #a8b9c6;
+    --heather: #a8b9c6;
+    --mori: #0e5942;
+    --moss: #5e9163;
+    --leaf: #dae07e;
 }

@@ -1,12 +1,10 @@
 :root {
-    --loden: #282202;
-    --latten: #E3CD76;
-
     --wool: #fffbf3;
     --cream: #fff0cc;
     --putty: #d1c3b5;
     --earth: #907467;
     --tweed: #5d4949;
+    --loden: #282202;
     --peach: #ffd4aa;
     --tenne: #f19a75;
     --aubergine: #573c57;
@@ -18,5 +16,5 @@
     --heather: #a8b9c6;
     --mori: #0e5942;
     --moss: #5e9163;
-    --leaf: #dae07e;
+    --latten: #E3CD76;
 }

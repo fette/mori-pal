@@ -1,83 +1,237 @@
-
-╭─── Claude Code v2.1.32 ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│                                  │ Tips for getting started                                                                               │
-│           Welcome back!          │ Run /init to create a CLAUDE.md file with instructions for Claude                                      │
-│                                  │ ─────────────────────────────────────────────────────────────────                                      │
-│                                  │ Recent activity                                                                                        │
-│             ▗ ▗   ▖ ▖            │ No recent activity                                                                                     │
-│                                  │                                                                                                        │
-│               ▘▘ ▝▝              │                                                                                                        │
-│   Opus 4.6 · API Usage Billing   │                                                                                                        │
-│     ~/meta-source/chunkforge     │                                                                                                        │
-╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-
-  Welcome to Opus 4.6
-
-❯ config 
-
-⏺ I'm not sure what you're looking for with "config." Could you clarify?
-
-  Are you asking about:
-  - Project configuration (e.g., package.json, tsconfig.json, .env)?
-  - Claude Code configuration (settings, MCP servers, etc.)?
-  - Something else?
-
-❯ claude told me to run `claude config set theme light` to get white text to show up better 
-
-⏺ That doesn't sound like correct guidance. The theme setting doesn't exist in Claude Code's configuration. Claude Code doesn't have a theme
-  setting that would affect text colors.
-
-  If you're having trouble with text visibility (white text on a light terminal background, for example), the fix is typically on the
-  terminal side, not Claude Code:
-
-  - Change your terminal's color scheme to one with better contrast
-  - Use a dark terminal background if text appears white
-  - Adjust your terminal emulator's ANSI color settings
-
-  What terminal are you using, and what's the actual visibility issue you're experiencing?
-
-❯ I'm in Apple Terminal, and Claude often uses white text that is hard to see on the cream colored background i am using 
-
-⏺ That's a common issue with light terminal backgrounds. Claude Code uses ANSI colors, and what appears as "white" is typically the default
-  foreground or bright-white ANSI color.
-
-  You have a few options:
-
-  Option 1: Fix it in Apple Terminal (recommended)
-  Go to Terminal > Settings > Profiles, select your profile, and under the Text tab, adjust the ANSI color for "White" (and "Bright White")
-  to something darker like dark gray or black. This won't affect your cream background.
-
-  Option 2: Use a different profile
-  Apple Terminal comes with built-in profiles. Try Pro or Homebrew which use dark backgrounds where white text is readable.
-
-  Option 3: Switch to a terminal with better theme support
-  Apps like iTerm2, Warp, or Ghostty let you customize ANSI color palettes more easily and have themes designed for light backgrounds.
-
-  Option 1 is the least disruptive — you keep your cream background but just remap the white ANSI colors to something visible.
-
-❯ /theme 
-  ⎿  Theme set to dark-ansi
-
-❯ /theme  
-─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
- Theme
-
- Choose the text style that looks best with your terminal
-
-   1. Dark mode
-   2. Light mode
-   3. Dark mode (colorblind-friendly)
-   4. Light mode (colorblind-friendly)
- ❯ 5. Dark mode (ANSI colors only) ✔
-   6. Light mode (ANSI colors only)
-
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
- 1  function greet() {
- 2 -  console.log("Hello, World!");                                                                                                          
- 2 +  console.log("Hello, Claude!");                                                                                                         
- 3  }
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
- Syntax highlighting available only in native build
-
- Enter to select · Esc to cancel
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ANSIBlackColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC4zNjQ3MDU4ODI0IDAuMjg2Mjc0NTA5
+	OCAwLjI4NjI3NDUwOTgAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
+	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	</data>
+	<key>ANSIBlueColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC4yMzUyOTQxMTc2IDAuNDY2NjY2NjY2
+	NyAwLjUyMTU2ODYyNzUAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
+	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	</data>
+	<key>ANSIBrightBlackColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC44MTk2MDc4NDMxIDAuNzY0NzA1ODgy
+	NCAwLjcwOTgwMzkyMTYAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
+	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	</data>
+	<key>ANSIBrightBlueColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC40NDA1ODAyNDg4IDAuNTA5NjI5MzA5
+	MiAwLjUxNjg1Nzk4MTcAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
+	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	</data>
+	<key>ANSIBrightCyanColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAmMC41MDU5OTE5MzU3IDAuNTY0ODU4Mzc3
+	IDAuNTYzNjM2NTQxNAAQAYAC0hQVFhdaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9y
+	ohYYWE5TT2JqZWN0CBEaJCkyN0lMUVNXXWRqd36nqauwu8TMzwAAAAAAAAEBAAAAAAAA
+	ABkAAAAAAAAAAAAAAAAAAADY
+	</data>
+	<key>ANSIBrightGreenColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC4yNzY3MTk5Mjc4IDAuMzU2NjU5NTYx
+	NCAwLjM4Mjk4NDg3NjYAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
+	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	</data>
+	<key>ANSIBrightMagentaColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC4zNDc5MjM4NDUxIDAuMzUxMzcxNTg2
+	MyAwLjcxNzkxNjcyNzEAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
+	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	</data>
+	<key>ANSIBrightRedColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAeMC43OTYwNzg0MzE0IDAuNCAwLjI5NDEx
+	NzY0NzEAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xvcqIWGFhOU09i
+	amVjdAgRGiQpMjdJTFFTV11kand+n6GjqLO8xMcAAAAAAAABAQAAAAAAAAAZAAAAAAAA
+	AAAAAAAAAAAA0A==
+	</data>
+	<key>ANSIBrightWhiteColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC4zNjQ3MDU4ODI0IDAuMjg2Mjc0NTA5
+	OCAwLjI4NjI3NDUwOTgAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
+	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	</data>
+	<key>ANSIBrightYellowColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAmMC4zMjQzNjYxODIxIDAuNDA3MTc2NzMz
+	IDAuNDM4NTA1NjQ5NgAQAYAC0hQVFhdaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9y
+	ohYYWE5TT2JqZWN0CBEaJCkyN0lMUVNXXWRqd36nqauwu8TMzwAAAAAAAAEBAAAAAAAA
+	ABkAAAAAAAAAAAAAAAAAAADY
+	</data>
+	<key>ANSICyanColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAlMC4zNjg2Mjc0NTEgMC41Njg2Mjc0NTEg
+	MC4zODgyMzUyOTQxABABgALSFBUWF1okY2xhc3NuYW1lWCRjbGFzc2VzV05TQ29sb3Ki
+	FhhYTlNPYmplY3QIERokKTI3SUxRU1ddZGp3fqaoqq+6w8vOAAAAAAAAAQEAAAAAAAAA
+	GQAAAAAAAAAAAAAAAAAAANc=
+	</data>
+	<key>ANSIGreenColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAlMC4zNjg2Mjc0NTEgMC41Njg2Mjc0NTEg
+	MC4zODgyMzUyOTQxABABgALSFBUWF1okY2xhc3NuYW1lWCRjbGFzc2VzV05TQ29sb3Ki
+	FhhYTlNPYmplY3QIERokKTI3SUxRU1ddZGp3fqaoqq+6w8vOAAAAAAAAAQEAAAAAAAAA
+	GQAAAAAAAAAAAAAAAAAAANc=
+	</data>
+	<key>ANSIMagentaColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAmMC45NzI1NDkwMTk2IDAuNzM3MjU0OTAy
+	IDAuNzY0NzA1ODgyNAAQAYAC0hQVFhdaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9y
+	ohYYWE5TT2JqZWN0CBEaJCkyN0lMUVNXXWRqd36nqauwu8TMzwAAAAAAAAEBAAAAAAAA
+	ABkAAAAAAAAAAAAAAAAAAADY
+	</data>
+	<key>ANSIRedColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAmMC45NzI1NDkwMTk2IDAuNzM3MjU0OTAy
+	IDAuNzY0NzA1ODgyNAAQAYAC0hQVFhdaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9y
+	ohYYWE5TT2JqZWN0CBEaJCkyN0lMUVNXXWRqd36nqauwu8TMzwAAAAAAAAEBAAAAAAAA
+	ABkAAAAAAAAAAAAAAAAAAADY
+	</data>
+	<key>ANSIWhiteColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC41NjQ3MDU4ODI0IDAuNDU0OTAxOTYw
+	OCAwLjQwMzkyMTU2ODYAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
+	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	</data>
+	<key>ANSIYellowColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC45NDUwOTgwMzkyIDAuNjAzOTIxNTY4
+	NiAwLjQ1ODgyMzUyOTQAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
+	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	</data>
+	<key>BackgroundAlphaInactive</key>
+	<real>1</real>
+	<key>BackgroundBlur</key>
+	<real>0.5</real>
+	<key>BackgroundBlurInactive</key>
+	<real>0.20000000000000001</real>
+	<key>BackgroundColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxATMSAwLjk0MTE3NjQ3MDYgMC44ABABgALS
+	FBUWF1okY2xhc3NuYW1lWCRjbGFzc2VzV05TQ29sb3KiFhhYTlNPYmplY3QIERokKTI3
+	SUxRU1ddZGp3fpSWmJ2osbm8AAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAAAAAAAAAAAMU=
+	</data>
+	<key>BackgroundSettingsForInactiveWindows</key>
+	<true/>
+	<key>BlinkText</key>
+	<false/>
+	<key>CursorBlink</key>
+	<false/>
+	<key>CursorColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAmMC41MDU5OTE5MzU3IDAuNTY0ODU4Mzc3
+	IDAuNTYzNjM2NTQxNAAQAYAC0hQVFhdaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9y
+	ohYYWE5TT2JqZWN0CBEaJCkyN0lMUVNXXWRqd36nqauwu8TMzwAAAAAAAAEBAAAAAAAA
+	ABkAAAAAAAAAAAAAAAAAAADY
+	</data>
+	<key>CursorType</key>
+	<integer>0</integer>
+	<key>DisableANSIColor</key>
+	<false/>
+	<key>DynamicANSIForegroundColors</key>
+	<false/>
+	<key>Font</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGkCwwVFlUkbnVsbNQNDg8QERIT
+	FFZOU1NpemVYTlNmRmxhZ3NWTlNOYW1lViRjbGFzcyNALgAAAAAAABAQgAKAA18QGUZh
+	bnRhc3F1ZVNhbnNNb25vLVJlZ3VsYXLSFxgZGlokY2xhc3NuYW1lWCRjbGFzc2VzVk5T
+	Rm9udKIZG1hOU09iamVjdAgRGiQpMjdJTFFTWF5nbnd+hY6QkpSwtcDJ0NMAAAAAAAAB
+	AQAAAAAAAAAcAAAAAAAAAAAAAAAAAAAA3A==
+	</data>
+	<key>FontHeightSpacing</key>
+	<integer>1</integer>
+	<key>FontWidthSpacing</key>
+	<integer>1</integer>
+	<key>ProfileCurrentVersion</key>
+	<real>2.0899999999999999</real>
+	<key>SelectionColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC44MTk2MDc4NDMxIDAuNzY0NzA1ODgy
+	NCAwLjcwOTgwMzkyMTYAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
+	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	</data>
+	<key>TerminalType</key>
+	<string>xterm-256color</string>
+	<key>TextBoldColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxApMC4xNTY4NjI3NDUxIDAuMTMzMzMzMzMz
+	MyAwLjAwNzg0MzEzNzI1NQAQAYAC0hQVFhdaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0Nv
+	bG9yohYYWE5TT2JqZWN0CBEaJCkyN0lMUVNXXWRqd36qrK6zvsfP0gAAAAAAAAEBAAAA
+	AAAAABkAAAAAAAAAAAAAAAAAAADb
+	</data>
+	<key>TextColor</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxApMC4xNTY4NjI3NDUxIDAuMTMzMzMzMzMz
+	MyAwLjAwNzg0MzEzNzI1NQAQAYAC0hQVFhdaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0Nv
+	bG9yohYYWE5TT2JqZWN0CBEaJCkyN0lMUVNXXWRqd36qrK6zvsfP0gAAAAAAAAEBAAAA
+	AAAAABkAAAAAAAAAAAAAAAAAAADb
+	</data>
+	<key>UseBoldFonts</key>
+	<true/>
+	<key>UseBrightBold</key>
+	<false/>
+	<key>name</key>
+	<string>Mori</string>
+	<key>type</key>
+	<string>Window Settings</string>
+</dict>
+</plist>
